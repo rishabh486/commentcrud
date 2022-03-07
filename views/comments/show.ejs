@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Details</title>
+</head>
+<body>
+     
+    <h1>Comment id: <%= commentData.id %></h1>
+    <h2><%= commentData.comment %>--<%= commentData.username %> </h2>
+    <a href="/comments">Back to index</a>
+    <a href="/comments/<%= commentData.id %>/edit">Edit</a>
+
+    <form action="/comments/<%= commentData.id %>?_method=DELETE" method="post">
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

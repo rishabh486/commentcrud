@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit</title>
+</head>
+<body>
+    <h2>Edit Comment</h2>
+
+    <form method="post" action="/comments/<%= foundComment.id %>?_method=PATCH">
+        <textarea name="comment" id="comment" cols="30" rows="5">
+            <%= foundComment.comment %> 
+        </textarea>
+        <br>
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>
